@@ -33,7 +33,7 @@ function EditPet() {
 
     const formData = new FormData()
 
-    const petFormData = await Object.keys(pet).forEach((key) => {
+    const petFormData = Object.keys(pet).forEach((key) => {
       if (key === 'images') {
         for (let i = 0; i < pet[key].length; i++) {
           formData.append(`images`, pet[key][i])
